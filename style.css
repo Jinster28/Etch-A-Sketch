@@ -1,12 +1,24 @@
 /* style.css - Etch-A-Sketch */
 
 .contMain {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .row {
     border-style: solid;
     border-color: black;  
-    height: 10px;
-    width: 100px; 
+    display: flex;
+    height: 100px;
+    width: 500px; 
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sqr {
+    border-style: dotted;
+    border-color: red;  
+    height: 30px;
+    width: 30px; 
+    justify-content: space-evenly;
 }

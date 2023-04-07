@@ -24,11 +24,6 @@ function createRow(num) {
         newRow.classList.add('row');
         let parent = document.querySelector('.contMain');
 
-        // Test Code
-        console.log(newRow);
-        console.log(parent);
-
-
         parent.appendChild(newRow);
     }
 }
@@ -39,19 +34,28 @@ function createRow(num) {
 function createSqr(num) {
 
     let sqrNum;
+    let rows = document.querySelectorAll('.row');
+
+    // Test Code
+    console.log(rows);
     
     if (Number.isInteger(num) && num > 0) {
-        sqrNum = num - 1;
+        sqrNum = num;
     } 
     else {
         sqrNum = 1;
     }
 
-    for (i = 0; i < sqrNum; i++) {
-
-    }
+   for (i = 0; i < rows.length; i++) {
+        for (j = 0; j < sqrNum; j++) {
+            let newSqr = document.createElement('div');
+            newSqr.classList.add('sqr');
+            rows[i].appendChild(newSqr);
+        }
+   }
 }
 
 // MAIN
 
-createRow(3);
+createRow(16);
+createSqr(16);
