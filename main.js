@@ -57,5 +57,5 @@ function createSqr(num) {
 
 // MAIN
 
-createRow(16);
-createSqr(16);
+createRow(ROW);
+createSqr(COLUMN);
