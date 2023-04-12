@@ -6,19 +6,40 @@
 }
 
 .row {
-    border-style: solid;
-    border-color: black;  
+    /* border-style: solid; */
+    /* border-color: black;   */
     display: flex;
-    height: 100px;
-    width: 500px; 
+    /* height: 100px; */
+    /* width: 500px;  */
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+}
+
+.rsBut,
+.clearBut {
+    width: 100px;
+    height: 30px;
+    margin: 5px;
 }
 
 .sqr {
-    border-style: dotted;
+    border-style: solid;
     border-color: red;  
-    height: 30px;
-    width: 30px; 
+    border-width: thin;
+    height: 10px;
+    width: 10px; 
     justify-content: space-evenly;
+}
+
+.sqr:hover {
+    background-color: blue;
+}
+
+.top {
+    height: 80px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+
 }

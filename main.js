@@ -57,5 +57,31 @@ function createSqr(num) {
 
 // MAIN
 
+// Default grid creation
 createRow(ROW);
 createSqr(COLUMN);
+
+// Adding Event Listener to the squares
+// If a square in the grid is clicked, it should change background color to black
+const markedDot = document.querySelectorAll('.sqr');
+
+for (i = 0; i < markedDot.length; i++) {
+    markedDot[i].addEventListener('click', function (e) {
+        e.target.style.background = 'black';
+    });
+}
+
+// Adding Event Listener to the Clear Button
+const clearGrid = document.querySelector('.clearBut');
+clearGrid.addEventListener('click', function(e) {
+
+    for (i = 0; i < markedDot.length; i++) {
+        markedDot[i].style.background = 'white';
+    }
+});
+
+// for (i = 0; i < clearGrid.length; i++) {
+//     console.log(clearGrid[i]);
+// }
+
+
